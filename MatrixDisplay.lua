@@ -17,13 +17,21 @@ while true do
     --     "%.2f",
     --     matrix.callRemote(mn, "getMaxEnergy") / 1000000000
     --  )
-    maxEnergy = matrix.callRemote(mn, "getMaxEnergy") / 1000000000
+    maxEnergy = matrix.callRemote(mn, "getMaxEnergy") / 1000000000000
+    fMaxEnergy = string.format(
+        "%.2f",
+        maxEnergy / 1000000000
+    )
     
     -- curEnergy = string.format(
     --     "%.2f",
     --     matrix.callRemote(mn, "getEnergy") / 1000000000
     --  )
-    curEnergy = matrix.callRemote(mn, "getEnergy") / 1000000000
+    curEnergy = matrix.callRemote(mn, "getEnergy") / 1000000000000
+    fCurEnergy = string.format(
+        "%.2f",
+        curEnergy / 1000000000
+    )
 
     percTen = percRes * 21
     formatted = string.format(
@@ -50,9 +58,9 @@ while true do
     monitor.write(formatted)
 
     monitor.setCursorPos(5,7)
-    monitor.write(curEnergy)
+    monitor.write(fCurEnergy)
     monitor.write(" / ")
-    monitor.write(maxEnergy)
+    monitor.write(fMaxEnergy)
 
 
 
