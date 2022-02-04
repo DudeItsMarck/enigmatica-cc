@@ -9,4 +9,4 @@ local mn = "inductionMatrix_0"
 
 local percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
 local finalPerc = percRes * 100
-monitor.write(finalPerc)
+monitor.write("Induction Matrix filled %" + finalPerc)
