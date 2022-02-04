@@ -47,20 +47,20 @@ while true do
     monitor.setCursorPos(8,1)
     monitor.write("Induction Matrix")
 
-    monitor.setCursorPos(6, 2)
+    monitor.setCursorPos(6, 3)
     monitor.write("Input:  ")
     monitor.write(fLastIn)
     monitor.write(" kFE/t")
 
-    monitor.setCursorPos(6, 3)
+    monitor.setCursorPos(6, 4)
     monitor.write("Output: ")
     monitor.write(fLastOut)
     monitor.write(" kFE/t")
     
-    monitor.setCursorPos(13,5)
+    monitor.setCursorPos(13,6)
     monitor.write(fPercRes)
     
-    monitor.setCursorPos(2,6)
+    monitor.setCursorPos(2,7)
     for i=1,28 do
         if i > percTen then
             monitor.setBackgroundColor(colors.red)
