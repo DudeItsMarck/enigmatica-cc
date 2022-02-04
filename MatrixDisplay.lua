@@ -1,3 +1,6 @@
+-- github clone DudeItsMarck/enigmatica-cc
+-- enigmatica-cc/MatrixDisplay.lua
+
 local monitor = peripheral.wrap("left")
 local matrix = peripheral.wrap("back")
 local mn = "inductionMatrix_0"
