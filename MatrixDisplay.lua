@@ -19,7 +19,7 @@ while true do
         percRes * 100
      )
     monitor.clear()
-    monitor.setCursorPos(1,5)
+    monitor.setCursorPos(4,5)
     monitor.write("Induction Matrix filled: ")
     
     monitor.setCursorPos(2,6)
