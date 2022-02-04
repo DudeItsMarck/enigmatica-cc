@@ -32,10 +32,10 @@ while true do
         percRes * 100
      )
     monitor.clear()
-    monitor.setCursorPos(4,5)
+    monitor.setCursorPos(4,4)
     monitor.write("Induction Matrix filled: ")
     
-    monitor.setCursorPos(2,6)
+    monitor.setCursorPos(2,5)
     for i=1,21 do
         if i > percTen then
             monitor.setBackgroundColor(colors.red)
@@ -54,7 +54,7 @@ while true do
     monitor.write(fCurEnergy)
     monitor.write(" / ")
     monitor.write(fMaxEnergy)
-    monitor.write(" Trillion FE")
+    monitor.write(" TFE")
 
 
 
