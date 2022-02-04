@@ -9,6 +9,7 @@ local formatted
 local event = os.pullEventRaw()
 matrix.open(1)
 monitor.clear()
+monitor.setTextScale(2)
 
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
