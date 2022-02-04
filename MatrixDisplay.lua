@@ -12,7 +12,7 @@ matrix.open(1)
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
     formatted = string.format(
-        "%.2f %%",
+        "%.2f%%",
         percRes * 100
      )
     monitor.clear()
