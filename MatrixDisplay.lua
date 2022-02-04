@@ -58,7 +58,7 @@ while true do
     monitor.write("Input: " + lastIn)
 
     monitor.setCursorPos(8, 9)
-    monitor.write(["Output: " + lastOut])
+    monitor.write("Output: " + lastOut)
 
     monitor.setCursorPos(8,10)
     monitor.write(fCurEnergy)
