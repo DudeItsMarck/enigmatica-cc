@@ -19,7 +19,6 @@ while true do
     monitor.setCursorPos(1,1)
     monitor.write("Induction Matrix filled: ")
     monitor.write(formatted)
-    monitor.write("%")
 
     local event, key = os.pullEvent( "key" ) -- limit os.pullEvent to the 'key' event
   
