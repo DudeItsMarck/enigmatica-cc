@@ -49,12 +49,12 @@ while true do
 
     monitor.setCursorPos(8, 2)
     monitor.write("I: ")
-    monitor.write(flastIn)
+    monitor.write(fLastIn)
     monitor.write(" kFE/t")
 
     monitor.setCursorPos(8, 3)
     monitor.write("O: ")
-    monitor.write(flastOut)
+    monitor.write(fLastOut)
     monitor.write(" kFE/t")
     
     monitor.setCursorPos(13,5)
