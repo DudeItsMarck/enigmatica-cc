@@ -22,7 +22,7 @@ while true do
 
     monitor.setCursorPos(1,2)
     for i=1,10 do
-        monitor.write("\177")
+        monitor.write("\127")
     end
 
     local event, key = os.pullEvent( "key" ) -- limit os.pullEvent to the 'key' event
