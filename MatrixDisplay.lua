@@ -13,7 +13,7 @@ monitor.setTextScale(2)
 
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
-    percTen = percRes * 20
+    percTen = percRes * 21
     formatted = string.format(
         "%.2f%%",
         percRes * 100
@@ -22,8 +22,8 @@ while true do
     monitor.setCursorPos(1,4)
     monitor.write("Induction Matrix filled: ")
     
-    monitor.setCursorPos(3,5)
-    for i=1,20 do
+    monitor.setCursorPos(2,5)
+    for i=1,21 do
         if i > percTen then
             monitor.setBackgroundColor(colors.red)
             monitor.write("\127")
