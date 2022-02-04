@@ -13,9 +13,18 @@ monitor.setTextScale(2)
 
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
-    lastIn = matrix.callRemote(mn, "getLastInput")
-    lastOut = matrix.callRemote(mn, "getLastOutput")
 
+    lastIn = matrix.callRemote(mn, "getLastInput")
+    fLastIn = string.format(
+        "%.0f",
+        lastIn
+    )
+    
+    lastOut = matrix.callRemote(mn, "getLastOutput")
+    fLastOut = string.format(
+        "%.0f",
+        lastOut
+    )
 
     maxEnergy = matrix.callRemote(mn, "getMaxEnergy") / 1000000000000
     fMaxEnergy = string.format(
@@ -30,7 +39,7 @@ while true do
     )
 
     percTen = percRes * 28
-    formatted = string.format(
+    fPercRes = string.format(
         "%.2f%%",
         percRes * 100
      )
@@ -39,15 +48,17 @@ while true do
     monitor.write("Induction Matrix")
 
     monitor.setCursorPos(8, 2)
-    monitor.write("Input:  ")
-    monitor.write(lastIn)
+    monitor.write("I: ")
+    monitor.write(flastIn)
+    monitor.write(" FE/t")
 
     monitor.setCursorPos(8, 3)
-    monitor.write("Output: ")
-    monitor.write(lastOut)
+    monitor.write("O: ")
+    monitor.write(flastOut)
+    monitor.write(" FE/t")
     
     monitor.setCursorPos(13,5)
-    monitor.write(formatted)
+    monitor.write(fPercRes)
     
     monitor.setCursorPos(2,6)
     for i=1,28 do
