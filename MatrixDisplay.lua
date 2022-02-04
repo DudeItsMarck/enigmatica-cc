@@ -26,17 +26,17 @@ while true do
         curEnergy
     )
 
-    percTen = percRes * 21
+    percTen = percRes * 28
     formatted = string.format(
         "%.2f%%",
         percRes * 100
      )
     monitor.clear()
-    monitor.setCursorPos(4,4)
-    monitor.write("Induction Matrix filled: ")
+    monitor.setCursorPos(8,1)
+    monitor.write("Induction Matrix: ")
     
     monitor.setCursorPos(2,5)
-    for i=1,21 do
+    for i=1,28 do
         if i > percTen then
             monitor.setBackgroundColor(colors.red)
             monitor.write(" ")
@@ -47,10 +47,10 @@ while true do
     end
     
     monitor.setBackgroundColor(colors.black)
-    monitor.write(" ")
+    monitor.setCursorPos(12,6)
     monitor.write(formatted)
 
-    monitor.setCursorPos(8,7)
+    monitor.setCursorPos(8,8)
     monitor.write(fCurEnergy)
     monitor.write(" / ")
     monitor.write(fMaxEnergy)
