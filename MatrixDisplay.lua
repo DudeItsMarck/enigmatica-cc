@@ -11,7 +11,7 @@ matrix.open(1)
 
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
-    percTen = percRes * 10
+    percTen = percRes * 20
     formatted = string.format(
         "%.2f%%",
         percRes * 100
@@ -22,12 +22,12 @@ while true do
     monitor.write(formatted)
 
     monitor.setCursorPos(1,2)
-    for i=1,10 do
+    for i=1,20 do
         if i > percTen then
-            monitor.setBackgroundColor(colors.black)
+            monitor.setBackgroundColor(colors.red)
             monitor.write("\127")
         else
-            monitor.setBackgroundColor(colors.white)
+            monitor.setBackgroundColor(colors.lime)
             monitor.write(" ")
         end
     end
