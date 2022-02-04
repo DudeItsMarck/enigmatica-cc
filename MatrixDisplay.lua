@@ -5,13 +5,16 @@ local monitor = peripheral.wrap("left")
 local matrix = peripheral.wrap("back")
 local mn = "inductionMatrix_0"
 local percRes
-local finalPerc
+local formatted
 local event = os.pullEventRaw()
 matrix.open(1)
 
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
-    finalPerc = percRes * 100
+    formatted = string.format(
+        "%.2f %%",
+        percRes * 100
+     )
     monitor.clear()
     monitor.setCursorPos(1,1)
     monitor.write("Induction Matrix filled: ")
