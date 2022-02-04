@@ -19,10 +19,10 @@ while true do
         percRes * 100
      )
     monitor.clear()
-    monitor.setCursorPos(1,4)
+    monitor.setCursorPos(1,5)
     monitor.write("Induction Matrix filled: ")
     
-    monitor.setCursorPos(2,5)
+    monitor.setCursorPos(2,6)
     for i=1,21 do
         if i > percTen then
             monitor.setBackgroundColor(colors.red)
