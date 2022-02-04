@@ -33,7 +33,7 @@ while true do
      )
     monitor.clear()
     monitor.setCursorPos(8,1)
-    monitor.write("Induction Matrix: ")
+    monitor.write("Induction Matrix")
     
     monitor.setCursorPos(2,5)
     for i=1,28 do
@@ -47,7 +47,7 @@ while true do
     end
     
     monitor.setBackgroundColor(colors.black)
-    monitor.setCursorPos(12,6)
+    monitor.setCursorPos(13,6)
     monitor.write(formatted)
 
     monitor.setCursorPos(8,8)
