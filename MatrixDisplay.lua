@@ -16,14 +16,14 @@ while true do
 
     lastIn = matrix.callRemote(mn, "getLastInput")
     fLastIn = string.format(
-        "%.0f",
-        lastIn
+        "%.2f",
+        lastIn / 1000
     )
     
     lastOut = matrix.callRemote(mn, "getLastOutput")
     fLastOut = string.format(
-        "%.0f",
-        lastOut
+        "%.2f",
+        lastOut / 1000
     )
 
     maxEnergy = matrix.callRemote(mn, "getMaxEnergy") / 1000000000000
@@ -50,12 +50,12 @@ while true do
     monitor.setCursorPos(8, 2)
     monitor.write("I: ")
     monitor.write(flastIn)
-    monitor.write(" FE/t")
+    monitor.write(" kFE/t")
 
     monitor.setCursorPos(8, 3)
     monitor.write("O: ")
     monitor.write(flastOut)
-    monitor.write(" FE/t")
+    monitor.write(" kFE/t")
     
     monitor.setCursorPos(13,5)
     monitor.write(fPercRes)
