@@ -54,7 +54,7 @@ while true do
     monitor.write(fCurEnergy)
     monitor.write(" / ")
     monitor.write(fMaxEnergy)
-    monitor.write("Trillion FE")
+    monitor.write(" Trillion FE")
 
 
 
