@@ -11,6 +11,7 @@ matrix.open(1)
 
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
+    percTen = percRes * 10
     formatted = string.format(
         "%.2f%%",
         percRes * 100
@@ -22,8 +23,17 @@ while true do
 
     monitor.setCursorPos(1,2)
     for i=1,10 do
-        monitor.write("\127")
+        if i > percTen
+            monitor.setBackgroundColor(color.black)
+            monitor.write("\127")
+        else
+            monitor.setBackgroundColor(color.white)
+            monitor.write(" ")
+        end
     end
+
+    monitor.setBackgroundColor(color.black)
+
 
     local event, key = os.pullEvent( "key" ) -- limit os.pullEvent to the 'key' event
   
