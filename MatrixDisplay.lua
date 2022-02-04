@@ -4,7 +4,7 @@
 local monitor = peripheral.wrap("left")
 local matrix = peripheral.wrap("back")
 local mn = "inductionMatrix_0"
-local percRes
+local percRes, maxEnergy, curEnergy
 local formatted
 local event = os.pullEventRaw()
 matrix.open(1)
@@ -13,6 +13,9 @@ monitor.setTextScale(2)
 
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
+    maxEnergy = matrix.callRemote(mn, "getMaxEnergy")
+    curEnergy = matrix.callRemote(mn, "getEnergy")
+
     percTen = percRes * 21
     formatted = string.format(
         "%.2f%%",
@@ -36,6 +39,12 @@ while true do
     monitor.setBackgroundColor(colors.black)
     monitor.write(" ")
     monitor.write(formatted)
+
+    monitor.setCursorPos(5,7)
+    monitor.write(curEnergy)
+    monitor.write(" / ")
+    monitor.write(maxEnergy)
+    
 
 
     -- local event, key = os.pullEvent( "key" ) -- limit os.pullEvent to the 'key' event
