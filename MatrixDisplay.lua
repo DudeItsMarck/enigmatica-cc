@@ -20,6 +20,11 @@ while true do
     monitor.write("Induction Matrix filled: ")
     monitor.write(formatted)
 
+    monitor.setCursorPos(2,1)
+    for i=1,10 do
+        monitor.write(▦)
+    end
+
     local event, key = os.pullEvent( "key" ) -- limit os.pullEvent to the 'key' event
   
     if key == keys.e then -- if the key pressed was 'e'
