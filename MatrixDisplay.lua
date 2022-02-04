@@ -50,7 +50,7 @@ while true do
     monitor.write(" ")
     monitor.write(formatted)
 
-    monitor.setCursorPos(7,7)
+    monitor.setCursorPos(8,7)
     monitor.write(fCurEnergy)
     monitor.write(" / ")
     monitor.write(fMaxEnergy)
