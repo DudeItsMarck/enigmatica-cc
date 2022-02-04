@@ -15,12 +15,12 @@ while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
     maxEnergy = string.format(
         "%.2f",
-        matrix.callRemote(mn, "getMaxEnergy")
+        matrix.callRemote(mn, "getMaxEnergy") / 1000000000
      )
     
     curEnergy = string.format(
         "%.2f",
-        matrix.callRemote(mn, "getEnergy")
+        matrix.callRemote(mn, "getEnergy") / 100000000
      )
 
     percTen = percRes * 21
