@@ -55,10 +55,10 @@ while true do
     monitor.setBackgroundColor(colors.black)
 
     monitor.setCursorPos(8, 8)
-    monitor.write(["Input: ", lastIn])
+    monitor.write("Input: " + lastIn)
 
     monitor.setCursorPos(8, 9)
-    monitor.write(["Output: ", lastOut])
+    monitor.write(["Output: " + lastOut])
 
     monitor.setCursorPos(8,10)
     monitor.write(fCurEnergy)
