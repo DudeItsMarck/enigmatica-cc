@@ -13,8 +13,15 @@ monitor.setTextScale(2)
 
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
-    maxEnergy = matrix.callRemote(mn, "getMaxEnergy")
-    curEnergy = matrix.callRemote(mn, "getEnergy")
+    maxEnergy = string.format(
+        "%.2f",
+        matrix.callRemote(mn, "getMaxEnergy")
+     )
+    
+    curEnergy = string.format(
+        "%.2f",
+        matrix.callRemote(mn, "getEnergy")
+     )
 
     percTen = percRes * 21
     formatted = string.format(
@@ -44,7 +51,7 @@ while true do
     monitor.write(curEnergy)
     monitor.write(" / ")
     monitor.write(maxEnergy)
-    
+
 
 
     -- local event, key = os.pullEvent( "key" ) -- limit os.pullEvent to the 'key' event
