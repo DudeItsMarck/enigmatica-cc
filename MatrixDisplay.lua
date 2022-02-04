@@ -39,7 +39,7 @@ while true do
     for i=1,21 do
         if i > percTen then
             monitor.setBackgroundColor(colors.red)
-            monitor.write("\127")
+            monitor.write(" ")
         else
             monitor.setBackgroundColor(colors.lime)
             monitor.write(" ")
