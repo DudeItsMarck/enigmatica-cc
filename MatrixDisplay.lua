@@ -47,13 +47,13 @@ while true do
     monitor.setCursorPos(8,1)
     monitor.write("Induction Matrix")
 
-    monitor.setCursorPos(7, 2)
-    monitor.write("In:  ")
+    monitor.setCursorPos(5, 2)
+    monitor.write("Input:  ")
     monitor.write(fLastIn)
     monitor.write(" kFE/t")
 
-    monitor.setCursorPos(7, 3)
-    monitor.write("Out: ")
+    monitor.setCursorPos(5, 3)
+    monitor.write("Output: ")
     monitor.write(fLastOut)
     monitor.write(" kFE/t")
     
