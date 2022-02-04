@@ -35,7 +35,11 @@ while true do
     monitor.setCursorPos(8,1)
     monitor.write("Induction Matrix")
     
-    monitor.setCursorPos(2,5)
+    monitor.setBackgroundColor(colors.black)
+    monitor.setCursorPos(13,5)
+    monitor.write(formatted)
+
+    monitor.setCursorPos(2,6)
     for i=1,28 do
         if i > percTen then
             monitor.setBackgroundColor(colors.red)
@@ -44,13 +48,9 @@ while true do
             monitor.setBackgroundColor(colors.lime)
             monitor.write(" ")
         end
-    end
-    
-    monitor.setBackgroundColor(colors.black)
-    monitor.setCursorPos(13,7)
-    monitor.write(formatted)
+    end    
 
-    monitor.setCursorPos(8,9)
+    monitor.setCursorPos(8,10)
     monitor.write(fCurEnergy)
     monitor.write(" / ")
     monitor.write(fMaxEnergy)
