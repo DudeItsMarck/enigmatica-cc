@@ -23,7 +23,7 @@ while true do
 
     monitor.setCursorPos(1,2)
     for i=1,10 do
-        if i > percTen
+        if i > percTen then
             monitor.setBackgroundColor(color.black)
             monitor.write("\127")
         else
