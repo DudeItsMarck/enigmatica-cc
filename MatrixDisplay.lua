@@ -35,7 +35,7 @@ while true do
     monitor.setCursorPos(8,1)
     monitor.write("Induction Matrix")
     
-    monitor.setCursorPos(2,5)
+    monitor.setCursorPos(2,4)
     for i=1,28 do
         if i > percTen then
             monitor.setBackgroundColor(colors.red)
