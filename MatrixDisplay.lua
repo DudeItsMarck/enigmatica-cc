@@ -16,7 +16,9 @@ while true do
     monitor.write("Induction Matrix filled: ")
     monitor.write(finalPerc)
     monitor.write("%")
-    if input === "stop"
+    
+    event = os.pullEventRaw()
+    if event == "stop" then
         break
     end
 end
