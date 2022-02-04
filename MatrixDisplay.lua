@@ -19,8 +19,7 @@ while true do
     monitor.clear()
     monitor.setCursorPos(1,1)
     monitor.write("Induction Matrix filled: ")
-    monitor.write(formatted)
-
+    
     monitor.setCursorPos(1,2)
     for i=1,20 do
         if i > percTen then
@@ -31,8 +30,10 @@ while true do
             monitor.write(" ")
         end
     end
-
+    
     monitor.setBackgroundColor(colors.black)
+    monitor.write(" ")
+    monitor.write(formatted)
 
 
     local event, key = os.pullEvent( "key" ) -- limit os.pullEvent to the 'key' event
