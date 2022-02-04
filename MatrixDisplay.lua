@@ -6,6 +6,7 @@ local matrix = peripheral.wrap("back")
 local mn = "inductionMatrix_0"
 local percRes
 local finalPerc
+local event = os.pullEventRaw()
 monitor.clear()
 monitor.setCursorPos(1,1)
 matrix.open(1)
@@ -16,8 +17,7 @@ while true do
     monitor.write("Induction Matrix filled: ")
     monitor.write(finalPerc)
     monitor.write("%")
-    
-    event = os.pullEventRaw()
+
     if event == "stop" then
         break
     end
