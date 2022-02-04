@@ -37,6 +37,14 @@ while true do
     monitor.clear()
     monitor.setCursorPos(8,1)
     monitor.write("Induction Matrix")
+
+    monitor.setCursorPos(8, 2)
+    monitor.write("Input:  ")
+    monitor.write(lastIn)
+
+    monitor.setCursorPos(8, 3)
+    monitor.write("Output: ")
+    monitor.write(lastOut)
     
     monitor.setCursorPos(13,5)
     monitor.write(formatted)
@@ -53,14 +61,6 @@ while true do
     end    
 
     monitor.setBackgroundColor(colors.black)
-
-    monitor.setCursorPos(8, 8)
-    monitor.write("Input: ")
-    monitor.write(lastIn)
-
-    monitor.setCursorPos(8, 9)
-    monitor.write("Output: ")
-    monitor.write(lastOut)
 
     monitor.setCursorPos(8,10)
     monitor.write(fCurEnergy)
