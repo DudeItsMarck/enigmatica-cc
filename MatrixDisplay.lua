@@ -13,23 +13,16 @@ monitor.setTextScale(2)
 
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
-    -- maxEnergy = string.format(
-    --     "%.2f",
-    --     matrix.callRemote(mn, "getMaxEnergy") / 1000000000
-    --  )
+
     maxEnergy = matrix.callRemote(mn, "getMaxEnergy") / 1000000000000
     fMaxEnergy = string.format(
-        "%.2f",
+        "%.3f",
         maxEnergy
     )
     
-    -- curEnergy = string.format(
-    --     "%.2f",
-    --     matrix.callRemote(mn, "getEnergy") / 1000000000
-    --  )
     curEnergy = matrix.callRemote(mn, "getEnergy") / 1000000000000
     fCurEnergy = string.format(
-        "%.2f",
+        "%.3f",
         curEnergy
     )
 
@@ -61,6 +54,7 @@ while true do
     monitor.write(fCurEnergy)
     monitor.write(" / ")
     monitor.write(fMaxEnergy)
+    monitor.write("Trillion FE")
 
 
 
