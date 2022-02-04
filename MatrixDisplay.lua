@@ -20,7 +20,7 @@ while true do
     monitor.write("Induction Matrix filled: ")
     monitor.write(formatted)
 
-    monitor.setCursorPos(2,1)
+    monitor.setCursorPos(1,2)
     for i=1,10 do
         monitor.write("\177")
     end
