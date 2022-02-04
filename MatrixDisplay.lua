@@ -13,7 +13,7 @@ monitor.setTextScale(2)
 
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
-    lastIn = matrix.callRemote(mn, "getLastInoput")
+    lastIn = matrix.callRemote(mn, "getLastInput")
     lastOut = matrix.callRemote(mn, "getLastOutput")
 
 
