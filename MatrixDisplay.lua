@@ -88,12 +88,12 @@ while true do
     monitor.write(fMaxEnergy)
     monitor.write(" TFE")
 
-    if percRes < minPercent and reactorOn == false then
+    if fPercRes < minPercent and reactorOn == false then
         modem.transmit(666, 665, "rsOn")
         reactorOn = true
         print("Reactor On")
     end
-    if percRes > maxPercent and reactorOn == true then
+    if fPercRes > maxPercent and reactorOn == true then
         modem.transmit(666, 665, "rsOff")
         reactorOn = false
         print("Reactor Off")
