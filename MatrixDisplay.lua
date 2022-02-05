@@ -66,13 +66,13 @@ while true do
     
     monitor.setCursorPos(2,7)
     for i=1,28 do
-        if i >= tonumber(percTen) or i == tonumber(percTen) then
+        if i <= tonumber(percTen) then
+            monitor.setBackgroundColor(colors.lime)
+            monitor.write(" ")
+        else
             monitor.setBackgroundColor(colors.red)
             monitor.write(" ")
             print(i)
-        else
-            monitor.setBackgroundColor(colors.lime)
-            monitor.write(" ")
         end
     end    
 
