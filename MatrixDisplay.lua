@@ -3,11 +3,16 @@
 
 local monitor = peripheral.wrap("left")
 local matrix = peripheral.wrap("back")
+local modem = peripheral.wrap("bottom")
 local mn = "inductionMatrix_0"
 local percRes, maxEnergy, curEnergy, lastIn, lastOut
 local formatted
 local event = os.pullEventRaw()
+local reactorOn = false
+local minPercent = 10
+local maxPercent = 99
 matrix.open(1)
+modem.open(665)
 monitor.clear()
 monitor.setTextScale(2)
 
@@ -84,7 +89,13 @@ while true do
     monitor.write(fMaxEnergy)
     monitor.write(" TFE")
 
-
+    if percRes < minPercent then
+        modem.transmit(666, 665, "rsOn")
+        reactorOn = true
+    else if percRes > maxPercent then
+        modem.transmit(666, 665, "rsOff")
+        reactorOn = false
+    end
 
     -- local event, key = os.pullEvent( "key" ) -- limit os.pullEvent to the 'key' event
   
