@@ -90,6 +90,10 @@ while true do
     monitor.write(fMaxEnergy)
     monitor.write(" TFE")
 
+    if tonumber(fPercRes) > minPercent and reactorOn == false then
+        reactorOn = true
+    end
+
     if tonumber(fPercRes) < minPercent and reactorOn == false then
         modem.transmit(666, 665, "rsOn")
         reactorOn = true
