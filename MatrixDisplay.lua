@@ -93,16 +93,9 @@ while true do
         reactorOn = true
         print("Reactor On")
     end
-    else if percRes > maxPercent and reactorOn == true then
+    if percRes > maxPercent and reactorOn == true then
         modem.transmit(666, 665, "rsOff")
         reactorOn = false
         print("Reactor Off")
     end
-
-    -- local event, key = os.pullEvent( "key" ) -- limit os.pullEvent to the 'key' event
-  
-    -- if key == keys.e then -- if the key pressed was 'e'
-    --   print( "You pressed [E]. Exiting program..." )
-    --   break
-    -- end
 end
