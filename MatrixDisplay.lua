@@ -49,9 +49,10 @@ while true do
     )
 
     fPercRes = string.format(
-        "%.2f%%",
+        "%.2f",
         percRes * 100
-     )
+    )
+
     monitor.clear()
     monitor.setCursorPos(8,1)
     monitor.write("Induction Matrix")
@@ -67,7 +68,7 @@ while true do
     monitor.write(" kFE/t")
     
     monitor.setCursorPos(13,6)
-    monitor.write(fPercRes)
+    monitor.write(fPercRes .. "%")
     
     monitor.setCursorPos(2,7)
     for i=1,28 do
