@@ -42,6 +42,7 @@ while true do
         "%.0f",
         percRes * 28
     )
+    
     fPercRes = string.format(
         "%.2f%%",
         percRes * 100
