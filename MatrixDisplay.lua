@@ -65,6 +65,7 @@ while true do
         if i >= percTen then
             monitor.setBackgroundColor(colors.red)
             monitor.write(" ")
+            print(percTen)
         else
             monitor.setBackgroundColor(colors.lime)
             monitor.write(" ")
