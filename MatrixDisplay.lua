@@ -38,7 +38,11 @@ while true do
         curEnergy
     )
 
-    percTen = percRes * 28
+    percTen = string.format(
+        "%.0f",
+        percRes * 28
+    )
+    monitor.
     fPercRes = string.format(
         "%.2f%%",
         percRes * 100
