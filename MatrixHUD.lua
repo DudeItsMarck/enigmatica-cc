@@ -72,7 +72,7 @@ while true do
 
     -- monitor.setBackgroundColor(colors.black)
 
-    arc.drawString(fCurEnergy .. " / " .. fMaxEnergy .. " TFE", 8, 10)
+    arc.drawString(fCurEnergy .. " / " .. fMaxEnergy .. " TFE", 8, 10, 0xFFFFFF)
 
 
 
