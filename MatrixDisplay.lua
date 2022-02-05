@@ -16,6 +16,8 @@ modem.open(665)
 monitor.clear()
 monitor.setTextScale(2)
 
+percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
+
 fPercRes = string.format(
     "%.2f",
     percRes * 100
