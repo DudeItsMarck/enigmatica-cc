@@ -26,6 +26,8 @@ fPercRes = string.format(
 if tonumber(fPercRes) > minPercent and reactorOn == false then
     reactorOn = true
     print("Reactor On")
+else
+    print("Reactor Off")
 end
 
 while true do
