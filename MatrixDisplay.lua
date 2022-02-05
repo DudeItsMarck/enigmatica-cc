@@ -52,6 +52,7 @@ while true do
         "%.2f",
         percRes * 100
     )
+    print(fPercRes)
 
     monitor.clear()
     monitor.setCursorPos(8,1)
