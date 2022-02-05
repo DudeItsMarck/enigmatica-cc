@@ -70,9 +70,8 @@ while true do
     --     end
     -- end    
 
-    monitor.setBackgroundColor(colors.black)
+    -- monitor.setBackgroundColor(colors.black)
 
-    monitor.setCursorPos(8,10)
     arc.drawString(fCurEnergy .. " / " .. fMaxEnergy .. " TFE", 8, 10)
 
 
