@@ -25,6 +25,7 @@ fPercRes = string.format(
 
 if tonumber(fPercRes) > minPercent and reactorOn == false then
     reactorOn = true
+    print("Reactor On")
 end
 
 while true do
@@ -63,7 +64,6 @@ while true do
         "%.2f",
         percRes * 100
     )
-    print(fPercRes)
 
     monitor.clear()
     monitor.setCursorPos(8,1)
