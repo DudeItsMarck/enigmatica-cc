@@ -16,6 +16,15 @@ modem.open(665)
 monitor.clear()
 monitor.setTextScale(2)
 
+fPercRes = string.format(
+    "%.2f",
+    percRes * 100
+)
+
+if tonumber(fPercRes) > minPercent and reactorOn == false then
+    reactorOn = true
+end
+
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
 
@@ -89,10 +98,6 @@ while true do
     monitor.write(" / ")
     monitor.write(fMaxEnergy)
     monitor.write(" TFE")
-
-    if tonumber(fPercRes) > minPercent and reactorOn == false then
-        reactorOn = true
-    end
 
     if tonumber(fPercRes) < minPercent and reactorOn == false then
         modem.transmit(666, 665, "rsOn")
