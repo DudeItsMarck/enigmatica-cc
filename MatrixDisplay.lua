@@ -77,7 +77,6 @@ while true do
         else
             monitor.setBackgroundColor(colors.red)
             monitor.write(" ")
-            print(i)
         end
     end    
 
@@ -89,12 +88,14 @@ while true do
     monitor.write(fMaxEnergy)
     monitor.write(" TFE")
 
-    if percRes < minPercent then
+    if percRes < minPercent and reactorOn == false then
         modem.transmit(666, 665, "rsOn")
         reactorOn = true
-    else if percRes > maxPercent then
+        print("Reactor On")
+    else if percRes > maxPercent and reactorOn == true then
         modem.transmit(666, 665, "rsOff")
         reactorOn = false
+        print("Reactor Off")
     end
 
     -- local event, key = os.pullEvent( "key" ) -- limit os.pullEvent to the 'key' event
