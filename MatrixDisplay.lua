@@ -17,6 +17,7 @@ monitor.clear()
 monitor.setTextScale(2)
 
 print("Reactor will turn on when the Induction Matrix capacity gets below " .. minPercent .. "%")
+print("And off when capacity gets above " .. maxPercent .. "%")
 
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
