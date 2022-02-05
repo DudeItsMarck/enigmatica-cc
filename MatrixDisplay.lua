@@ -16,19 +16,7 @@ modem.open(665)
 monitor.clear()
 monitor.setTextScale(2)
 
-percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
-
-fPercRes = string.format(
-    "%.2f",
-    percRes * 100
-)
-
-if tonumber(fPercRes) > minPercent and reactorOn == false then
-    reactorOn = true
-    print("Reactor On")
-else
-    print("Reactor Off")
-end
+print("Reactor will turn on when the Induction Matrix capacity gets below " .. minPercent .. "%")
 
 while true do
     percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
