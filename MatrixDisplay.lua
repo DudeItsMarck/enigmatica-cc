@@ -42,7 +42,7 @@ while true do
         "%.0f",
         percRes * 28
     )
-    
+
     fPercRes = string.format(
         "%.2f%%",
         percRes * 100
@@ -66,7 +66,7 @@ while true do
     
     monitor.setCursorPos(2,7)
     for i=1,28 do
-        if i >= percTen then
+        if i >= tonumber(percTen) then
             monitor.setBackgroundColor(colors.red)
             monitor.write(" ")
             print(percTen)
