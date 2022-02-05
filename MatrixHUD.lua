@@ -49,7 +49,7 @@ while true do
         percRes * 100
      )
 
-    -- arc.clear()
+    arc.clear()
     arc.drawString("Induction Matrix", 8, 1, 0xFFFFFF)
 
     arc.drawString("Input:  " .. tostring(fLastIn) .. " kFE/t", 6, 3, 0xFFFFFF)
