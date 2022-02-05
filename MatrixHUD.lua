@@ -9,7 +9,7 @@ local formatted
 local event = os.pullEventRaw()
 matrix.open(1)
 arc.clear()
-arc.setRelativeMode(true, 30, 10)
+arc.setRelativeMode(true, 60, 20)
 
 
 while true do
