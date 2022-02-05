@@ -62,7 +62,7 @@ while true do
     
     monitor.setCursorPos(2,7)
     for i=1,28 do
-        if i > percTen then
+        if i >= percTen then
             monitor.setBackgroundColor(colors.red)
             monitor.write(" ")
         else
