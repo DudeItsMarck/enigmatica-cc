@@ -69,7 +69,7 @@ while true do
         if i >= tonumber(percTen) or i == tonumber(percTen) then
             monitor.setBackgroundColor(colors.red)
             monitor.write(" ")
-            print(percTen)
+            print(i)
         else
             monitor.setBackgroundColor(colors.lime)
             monitor.write(" ")
