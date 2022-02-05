@@ -92,6 +92,7 @@ while true do
         modem.transmit(666, 665, "rsOn")
         reactorOn = true
         print("Reactor On")
+    end
     else if percRes > maxPercent and reactorOn == true then
         modem.transmit(666, 665, "rsOff")
         reactorOn = false
