@@ -2,15 +2,16 @@
 -- enigmatica-cc/MatrixDisplay.lua
 
 local monitor = peripheral.wrap("left")
-local matrix = peripheral.wrap("back")
+local matrix = peripheral.wrap("inductionPort_0")
 local modem = peripheral.wrap("bottom")
-local mn = "inductionPort_0"
+local mn = ""
 local percRes, maxEnergy, curEnergy, lastIn, lastOut
 local formatted
 local event = os.pullEventRaw()
 local reactorOn = false
 local minPercent = 10
 local maxPercent = 99
+
 matrix.open(1)
 modem.open(665)
 monitor.clear()
@@ -20,27 +21,27 @@ print("Reactor will turn on when the Induction Matrix capacity gets below " .. m
 print("And off when capacity gets above " .. maxPercent .. "%")
 
 while true do
-    percRes = matrix.callRemote(mn, "getEnergyFilledPercentage")
+    percRes = matrix.getEnergyFilledPercentage()
 
-    lastIn = matrix.callRemote(mn, "getLastInput")
+    lastIn = matrix.getLastInput() / 2.5
     fLastIn = string.format(
         "%.2f",
         lastIn / 1000
     )
     
-    lastOut = matrix.callRemote(mn, "getLastOutput")
+    lastOut = matrix.getLastOutput() / 2.5
     fLastOut = string.format(
         "%.2f",
         lastOut / 1000
     )
 
-    maxEnergy = matrix.callRemote(mn, "getMaxEnergy") / 1000000000000
+    maxEnergy = matrix.getMaxEnergy() / 2.5 / 1000000000000
     fMaxEnergy = string.format(
         "%.3f",
         maxEnergy
     )
     
-    curEnergy = matrix.callRemote(mn, "getEnergy") / 1000000000000
+    curEnergy = matrix.getEnergy() / 2.5 / 1000000000000
     fCurEnergy = string.format(
         "%.3f",
         curEnergy
