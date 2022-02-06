@@ -4,7 +4,7 @@
 local monitor = peripheral.wrap("left")
 local matrix = peripheral.wrap("back")
 local modem = peripheral.wrap("bottom")
-local mn = "inductionMatrix_0"
+local mn = "inductionPort_0"
 local percRes, maxEnergy, curEnergy, lastIn, lastOut
 local formatted
 local event = os.pullEventRaw()
