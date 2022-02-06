@@ -12,7 +12,7 @@ local reactorOn = false
 local minPercent = 10
 local maxPercent = 99
 
-matrix.open(1)
+-- matrix.open(1)
 modem.open(665)
 monitor.clear()
 monitor.setTextScale(2)
