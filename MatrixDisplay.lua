@@ -61,14 +61,10 @@ while true do
     monitor.write("Induction Matrix")
 
     monitor.setCursorPos(6, 3)
-    monitor.write("Input:  ")
-    monitor.write(fLastIn)
-    monitor.write(" kFE/t")
+    monitor.write("Input:  " .. fLastIn .. " kFE/t")
 
     monitor.setCursorPos(6, 4)
-    monitor.write("Output: ")
-    monitor.write(fLastOut)
-    monitor.write(" kFE/t")
+    monitor.write("Output: " .. fLastOut .. " kFE/t")
     
     monitor.setCursorPos(13,6)
     monitor.write(fPercRes .. "%")
@@ -87,10 +83,7 @@ while true do
     monitor.setBackgroundColor(colors.black)
 
     monitor.setCursorPos(8,10)
-    monitor.write(fCurEnergy)
-    monitor.write(" / ")
-    monitor.write(fMaxEnergy)
-    monitor.write(" TFE")
+    monitor.write(fCurEnergy .. " / " .. fMaxEnergy .. " TFE")
 
     if tonumber(fPercRes) < minPercent and reactorOn == false then
         modem.transmit(666, 665, "rsOn")
